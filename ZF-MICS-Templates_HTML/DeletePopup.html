@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="ZF UX Table Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>ZF UX Table Template</title>
+
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/bootstrap-table.css">
+
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/bootstrap-plugins.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bootstrap-table.js"></script>
+
+</head>
+
+
+
+    <!-- A button and a link which both trigger the popup dialog. In the data-* attributes 
+        you can set your own text which have to be be displayed in the dialog. You can 
+        introduce more data-* attributes, see more in the comments below. -->
+    
+    <p>
+        <button class="btn btn-default" data-toggle="modal" data-target="#okPopupDialog" data-title="Your title here" data-message="This is an example for a simple OK popup dialog. You can place and format your text in this body section.">Open Popup with Button</button>
+        <a class="margin-left-sm" href="#" data-toggle="modal" data-target="#okPopupDialog" data-title="Your title here" data-message="This is an example for a simple OK popup dialog. You can place and format your text in this body section.">Open Popup with a text link</a>
+    </p>
+    
+    <!-- The popup dialog itself as a bunch of divs. You can format your dialog content here, 
+            especially in the 'modal-body' div. -->
+    
+    <div class="modal fade" id="okPopupDialog" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close dialog-close-button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalLabel">Title (will be replaced)</h4>
+                </div>
+                <div class="modal-body">
+                    Message (will be replaced)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+		   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The JS/JQuery code which replaces certain html values by using modal.find() with 
+        your text in the data-* attributes. To select the correct dialog, you need to specify 
+        the right dialog ID. If you introduce more data-* attributes, of course you have to 
+        extend this JS code too. -->
+    
+    <script>
+    
+        $( document ).ready(function() {
+            $('#okPopupDialog').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var title = button.data('title'); // Extract info from data-* attributes
+                var message = button.data('message'); // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this);
+                modal.find('.modal-title').text(title);
+                modal.find('.modal-body').text(message);
+            })
+        });
+    
+    </script>
+    <!-- A button and a link which both trigger the popup dialog. In the data-* attributes 
+        you can set your own text which have to be be displayed in the dialog. You can 
+        introduce more data-* attributes, see more in the comments below. -->
+    
+    <p>
+        <button class="btn btn-default" data-toggle="modal" data-target="#okPopupDialog" data-title="Delete Target Values Assignment" data-message="Are you sure to Delete a Target Value Assignment?">Open Popup with Button</button>
+        <a class="margin-left-sm" href="#" data-toggle="modal" data-target="#okPopupDialog" data-title="Are you sure ">Open Popup with a text link</a>
+    </p>
+    
+    <!-- The popup dialog itself as a bunch of divs. You can format your dialog content here, 
+            especially in the 'modal-body' div. -->
+    
+    <div class="modal fade" id="okPopupDialog" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close dialog-close-button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalLabel">Title (will be replaced)</h4>
+                </div>
+                <div class="modal-body">
+                    Message (will be replaced)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The JS/JQuery code which replaces certain html values by using modal.find() with 
+        your text in the data-* attributes. To select the correct dialog, you need to specify 
+        the right dialog ID. If you introduce more data-* attributes, of course you have to 
+        extend this JS code too. -->
+    
+    <script>
+    
+        $( document ).ready(function() {
+            $('#okPopupDialog').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var title = button.data('title'); // Extract info from data-* attributes
+                var message = button.data('message'); // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this);
+                modal.find('.modal-title').text(title);
+                modal.find('.modal-body').text(message);
+            })
+        });
+    
+    </script>

@@ -1,0 +1,80 @@
+
+#content {
+    padding: 10px 40px 40px 40px;
+}
+
+.fixed-table-container {
+    height: 450px !important;
+}
+
+.btn.disabled:hover, .btn[disabled]:hover, fieldset[disabled]:hover .btn:hover {
+    background-color: #2870bb;
+}
+
+.editable {
+    color: black;
+}
+
+.editable-buttons > button {
+    margin-top: 6px;
+    margin-right: 4px;
+    padding-top: 7px;
+}
+
+.btn-default {
+    margin-left: 1px !important;
+}
+
+.btn-with-icon {
+    padding-right: 17px;
+}
+
+.add-button {
+   padding-right: 34px;
+}
+ 
+.btn-group.pull-right .btn, .btn-group.pull-right .dropdown-toggle {
+    padding: 0px 15px;
+    margin-top: 6px;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #e1e8ec;
+}
+
+.stripe {
+    background-color: #fff ;
+}
+
+.nostripe {
+    background-color: #fbfbfb ;
+}
+
+.default-table {
+   font-size: 15px;
+}
+
+#table {
+    margin-top: 10px;
+}
+
+th {
+    color: #333 !important;
+}
+
+.arrow-right-heading {
+    font-size:32px; 
+    font-weight:bold;
+}
+
+.headline-decorated {
+    color: #D5B076;
+}
+
+.fixed-table-body thead th .th-inner {
+    color: #2870bb;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 1px solid #eee;
+}
