@@ -1,4 +1,4 @@
-﻿
+
 var $table = $('#table');
 var $remove = $('#remove');
 var selections = [];
@@ -79,13 +79,6 @@ function operateFormatter(value, row, index) {
     ].join('');
 }
 
-function operateFormatter1(value, row, index) {
-    return [
-        '<a class="remove" href="javascript:void(0)" title="Remove">',
-        '<i class="material-icons icon-inline md-20" style="color:#699bcf">delete_forever</i>',
-        '</a>'
-    ].join('');
-}
 function statusFormatter(value, row, index) {
     if (value == "ok") {
         return [
@@ -317,16 +310,7 @@ var columns = [
         align: 'left',
        
     },
-
-    
-     {
-        field: 'operate',
-        title: '',
-        align: 'center',
-        events: operateEvents,
-        formatter: operateFormatter1
-    }
-,{
+    {
         field: 'operate',
         title: '',
         align: 'center',
