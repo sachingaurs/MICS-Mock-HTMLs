@@ -1,4 +1,4 @@
-﻿
+
 var $table = $('#table');
 var $remove = $('#remove');
 var selections = [];
@@ -71,13 +71,6 @@ function detailFormatter(index, row) {
     return html.join('');
 }
 
-function operateFormatter(value, row, index) {
-    return [
-        '<a class="remove" href="javascript:void(0)" title="Remove">',
-        '<i class="material-icons icon-inline md-20" style="color:#699bcf">delete_forever</i>',
-        '</a>'
-    ].join('');
-}
 
 function operateFormatter1(value, row, index) {
     return [
@@ -302,14 +295,13 @@ var columns = [
         footerFormatter: totalNameFormatter,
         align: 'left'
     },
+    {
+        field: 'Type',
+        title: 'Type',
+        sortable: true,
+        footerFormatter: totalNameFormatter,
+        align: 'left'
 
-    
-     {
-        field: 'operate',
-        title: '',
-        align: 'center',
-        events: operateEvents,
-        formatter: operateFormatter
     },
  
     {
@@ -337,12 +329,14 @@ var exampleTableData = [
         "id": 1,
         "Name": "M89128",
         "Description": "Einpressen KTW",
+	"Type": "T"	
     },
     {
         "state": false,
         "id": 2,
         "Name": "M89070",
         "Description": "Portal Härten Zollern",
+	"Type": "T"
         
     },
     {
@@ -350,6 +344,7 @@ var exampleTableData = [
         "id": 3,
         "Name": "M89050",
         "Description": "Portal Schweißen Zollern",
+	"Type": "ST"
         
     },
     {
@@ -357,34 +352,34 @@ var exampleTableData = [
         "id": 4,
         "Name": "M09159",
         "Description": "Liebherr LC300 CNC",
-        
+        "Type": "T"
     },
     {
         "state": false,
         "id": 5,
         "Name": "M09161",
         "Description": "Weisser Drehmaschine",
-        
+        "Type": "T"
     },
     {
         "state": false,
         "id": 6,
         "Name": "M09161",
         "Description": "Weisser Drehmaschine",
-        
+        "Type": "ST"
     },
     {
         "state": false,
         "id": 7,
         "Name": "M09253",
         "Description": "Bartsch Roboterzelle",
-        
+        "Type": "T"
     },
     {
         "state": false,
         "id": 8,
         "Name": "M09000",
         "Description": "EFD Induktionshärteanlage",
-        
+        "Type": "T"
     }
 ];
