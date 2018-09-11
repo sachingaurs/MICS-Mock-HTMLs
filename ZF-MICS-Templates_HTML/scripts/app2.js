@@ -1,4 +1,4 @@
-﻿
+
 var $table = $('#table');
 var $remove = $('#remove');
 var selections = [];
